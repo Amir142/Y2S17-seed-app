@@ -21,10 +21,6 @@ def home_page():
 def categories():
     return render_template('categories.html')
 
-@app.route('/storis/<int:stori_id>')
+@app.route('/stori/<int:stori_id>')
 def stori_id(stori_id):
-    return render_template('stori.html')
-
-@app.route('/storis')
-def stori(stori_id):
     return render_template('stori.html')

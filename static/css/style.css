@@ -3,3 +3,27 @@
 	height:70%;
 	background-color: red; 
 }
+h1 {
+    font-size: 100px;
+    font-style:bold;
+    text-align:center;
+    color: white;
+}
+body{
+    background-color: white;
+}
+
+.UpperBar{
+    width: 100%;
+    height: 50px;
+    background-color: #0081AF;
+}
+
+.box {
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    background-color: lightblue;
+}

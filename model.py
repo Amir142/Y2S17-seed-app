@@ -10,7 +10,6 @@ class Storis(Base):
     rating         = Column(Integer)
     description    = Column(String)
     pic_url        = Column(String)
-    # ADD YOUR FIELD BELOW ID
 
 # IF YOU NEED TO CREATE OTHER TABLE 
 # FOLLOW THE SAME STRUCTURE AS YourModel
