@@ -11,17 +11,16 @@ app = Flask(__name__)
 engine = create_engine('sqlite:///project.db')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
-session = DBSession()
-
+session = DBSession() 
 
 @app.route('/')
-def HomePage():
-    # stori_list = session.query(Storis).all()
-    stori_list = [
-    {"author": "MAtt","rating": "1", "description": "hello", "pic_url":"http:///"},
-    {"author": "MAtt","rating": "1", "description": "hello", "pic_url":"http:///"},
-    {"author": "MAtt","rating": "1", "description": "hello", "pic_url":"http:///"},
-    {"author": "MAtt","rating": "1", "description": "hello", "pic_url":"http:///"},
-    {"author": "MAtt","rating": "1", "description": "hello", "pic_url":"http:///"}]
-    return render_template('index.html', stori_list=stori_list)
+def home_page():
+    return render_template('index.html')
 
+@app.route('/categories')
+def categories():
+    return render_template('categories.html')
+
+@app.route('/stori/<int:stori_id>')
+def stori_id(stori_id):
+    return render_template('stori.html')

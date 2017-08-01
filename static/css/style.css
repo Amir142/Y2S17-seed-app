@@ -1,3 +1,8 @@
+.stori_info{
+	width:90%;
+	height:70%;
+	background-color: red; 
+}
 h1 {
     font-size: 100px;
     font-style:bold;
@@ -6,7 +11,10 @@ h1 {
 }
 body{
     background-color: white;
+<<<<<<< HEAD
     /*background-color: #D8D4F2;*/
+=======
+>>>>>>> 2ff54e908366f3bb1c197264bf2e144888511d26
 }
 
 .UpperBar{
