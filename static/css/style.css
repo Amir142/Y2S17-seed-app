@@ -3,6 +3,7 @@
 	height:70%;
 	background-color: red; 
 }
+    
 h1 {
     font-size: 100px;
     font-style:bold;
@@ -11,32 +12,36 @@ h1 {
 }
 body{
     background-color: white;
-<<<<<<< HEAD
-    /*background-color: #D8D4F2;*/
-=======
->>>>>>> 2ff54e908366f3bb1c197264bf2e144888511d26
 }
 
 .UpperBar{
     width: 100%;
     height: 50px;
-    background-color: #0081AF;
+    /*background-color: #0081AF;*/
+    background-color: #000033;
 }
 
 .box {
-    border: 1px lightblue;
+    border: 1px #FFDD99;
     margin-top: 10px;
     margin-bottom: 100px;
     margin-right: 150px;
     margin-left: 80px;
-    background-color: lightblue;
+    background-color: #FFDD99;
 }
 .box_2 {
-    border: 1px lightblue;
+    border: 1px #FFDD99;
     margin-top: 50px;
     margin-bottom: 500px;
     margin-right: 150px;
     margin-left: 80px;
-    background-color: lightblue;
+    background-color: #FFDD99;
 
+}
+.h1-5{
+    margin-left: 50px;
+    margin-bottom:100px;
+    margin-right: 150;
+    margin-top: 150;
+    font-size: 56px;
 }
