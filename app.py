@@ -11,13 +11,11 @@ app = Flask(__name__)
 engine = create_engine('sqlite:///project.db')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
-session = DBSession()
-
+session = DBSession() 
 
 @app.route('/')
 def home_page():
     return render_template('index.html')
-
 
 @app.route('/add')
 def add():
@@ -27,10 +25,6 @@ def add():
 def categories():
     return render_template('categories.html')
 
-@app.route('/categories/stori/<int:id>')
-def categories_stori():
-    return render_template('categories_stori.html')
-
-@app.route('/stori/<int:id>')
+@app.route('/stori/<int:stori_id>')
 def index_stori():
-    return render_template('index_stori.html')
+    return render_template('index_stori.html', stori_id = stori_id)
