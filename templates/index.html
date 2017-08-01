@@ -2,7 +2,9 @@
 <html>
 
   <head>
-      <title>STORI</title>
+  <title>STORI</title>
+
+      
       <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
       <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
 
@@ -11,16 +13,20 @@
       <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
   </head>
+
   <body>
-  <h1>Stori</h1>
+  <center><img src="../static/img/logo" style="width:304px;height:150px;" alt="logo"></center>
+  <style style="margin-right: 75px;"> </style>
+  
   <div class="UpperBar">
 
   </div>
 
-  <h2 style="margin-left: 50px; margin-bottom:100px;margin-right: 150;margin-top: 150"> Top: </h2>
+  <h2 class= "h1-5"> Top: </h2>
 
 {% for box in stori_list %}
 <div class="box">
+<img src="/home/student/Desktop/Y2S17-seed-app/static/img/star.png">
   <p>
           <div class="tweet-container">
             <a href="BROKEN-LINK-FIX-ME" class="btn btn-info" role="button">Edit</a>
