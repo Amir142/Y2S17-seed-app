@@ -11,10 +11,6 @@ h1 {
 }
 body{
     background-color: white;
-<<<<<<< HEAD
-    /*background-color: #D8D4F2;*/
-=======
->>>>>>> 2ff54e908366f3bb1c197264bf2e144888511d26
 }
 
 .UpperBar{
@@ -31,12 +27,23 @@ body{
     margin-left: 80px;
     background-color: lightblue;
 }
-.box_2 {
-    border: 1px lightblue;
-    margin-top: 50px;
-    margin-bottom: 500px;
-    margin-right: 150px;
-    margin-left: 80px;
-    background-color: lightblue;
 
+#add_pic_url {
+    float:left;
+    border-style: solid;
+    border-width: 10;
+    border-color: black;
+    display: inline-block;
+    margin-left: 50%;
+    width: 50%;
+    height:100;
+}
+#add_form{
+    border-style: solid;
+    border-width: 10;
+    border-color: black;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    margin-right: 50%;
 }
