@@ -16,4 +16,12 @@ session = DBSession()
 
 @app.route('/')
 def HomePage():
-    return render_template('index.html')
+    # stori_list = session.query(Storis).all()
+    stori_list = [
+    {"author": "MAtt","rating": "1", "description": "hello", "pic_url":"http:///"},
+    {"author": "MAtt","rating": "1", "description": "hello", "pic_url":"http:///"},
+    {"author": "MAtt","rating": "1", "description": "hello", "pic_url":"http:///"},
+    {"author": "MAtt","rating": "1", "description": "hello", "pic_url":"http:///"},
+    {"author": "MAtt","rating": "1", "description": "hello", "pic_url":"http:///"}]
+    return render_template('index.html', stori_list=stori_list)
+

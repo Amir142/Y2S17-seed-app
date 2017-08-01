@@ -2,10 +2,11 @@ h1 {
     font-size: 100px;
     font-style:bold;
     text-align:center;
-    color: white;
+    color: black;
 }
 body{
-    background-color: #D8D4F2;
+    background-color: white;
+    /*background-color: #D8D4F2;*/
 }
 
 .UpperBar{
@@ -15,10 +16,19 @@ body{
 }
 
 .box {
-    border: 1px solid black;
+    border: 1px lightblue;
     margin-top: 10px;
     margin-bottom: 100px;
     margin-right: 150px;
     margin-left: 80px;
     background-color: lightblue;
+}
+.box_2 {
+    border: 1px lightblue;
+    margin-top: 50px;
+    margin-bottom: 500px;
+    margin-right: 150px;
+    margin-left: 80px;
+    background-color: lightblue;
+
 }

@@ -18,14 +18,25 @@
 
   <h2 style="margin-left: 50px; margin-bottom:100px;margin-right: 150;margin-top: 150"> Top: </h2>
 
-<div class="box"><p>Lorem ipsum dolor sit amet, per an purto liber praesent, nostrud detracto mediocrem sed cu. Usu id assum vulputate, timeam expetenda ex vix, accusam periculis usu te. Mei duis clita solet ne. Cu soluta necessitatibus vim.
+{% for box in stori_list %}
+<div class="box">
+  <p>
+          <div class="tweet-container">
+            <a href="BROKEN-LINK-FIX-ME" class="btn btn-info" role="button">Edit</a>
+            <div class="tweet-body">
+              <img class="tweet-img" src="{{box.pic_url}}" alt="picture-{{box.id}}">
+              <div class="tweet-text">{{box.description}}</div>
+            </div>
+            <div class="tweet-footer">
+              <div class="tweet-user">{{box.author}}</div>
+              <div class="tweet-user">{{box.location}}</div>
+              <div class="tweet-user">{{box.favorite_count}}</div>
+            </div>
+          </div>
+  </p>
+</div>
+{% endfor %}
 
-Amet libris laoreet eam ei. Labore sententiae pri an. Ut brute soluta eum, nec in oblique ceteros interesset. Duo docendi singulis id. Tale hendrerit reprimique an ius, an posse vidisse cum, cu wisi etiam repudiare vix. Ex est omnis definiebas, pericula conclusionemque ei cum. Vel congue blandit iracundia ei, sit velit regione tractatos eu.
 
-In tota denique mel, putant alterum vivendo quo no, noluisse invenire eam ad. Alia zril mel id, qui dicat quando expetendis id. Quo insolens efficiantur ex, in semper impedit delicatissimi cum. Diam lorem appetere eam at, usu no alia debet argumentum.
-
-Ex sed laudem patrioque, assueverit complectitur an mel. Mea at assentior dissentiet, eam cu alia nostrud oporteat. Sea aeque solet at, ne mea liber clita, alii mnesarchum et sea. Probo mutat dicat usu ad. Velit essent eos ad.
-
-Eam ut sale iriure. Sea eu mundi concludaturque, enim diceret no vel, est vide insolens postulant cu. Ei ius esse justo oporteat. Nec an ridens fierent platonem, sea vitae mandamus ea, mei mutat error mentitum ex. Ei nec admodum instructior, sit in everti indoctum vulputate.</p></div>
   </body>
 </html>
