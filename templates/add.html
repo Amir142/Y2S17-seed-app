@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Add stori</title>
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+
+      <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+  </head>
+  <body>
+    <div class="UpperBar">
+
+    <h1>Write your own Stori!</h1>
+    <form>
+    Stori Name: <br>
+    <input type="text" name="Stori_name">
+    Author:
+    <input type="text" name="Author" placeholder="your name...">
+    </form>
+	</body>
+</html>

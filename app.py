@@ -17,10 +17,14 @@ session = DBSession()
 def home_page():
     return render_template('index.html')
 
+@app.route('/add')
+def add():
+    return render_template('add.html')
+
 @app.route('/categories')
 def categories():
     return render_template('categories.html')
 
 @app.route('/stori/<int:stori_id>')
-def stori_id(stori_id):
-    return render_template('stori.html')
+def index_stori():
+    return render_template('index_stori.html', stori_id = stori_id)
