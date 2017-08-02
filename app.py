@@ -13,9 +13,12 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession() 
 
+example = Storis(name = "stori1", author = "Amir", tags = "#this #that", rating = 23, description = "fake",text = "stori here", pic_url = "insert fake url")
+session.add(example)
+session.commit()
 
 
-@app.route('/',methods = ['GET','POST'])
+@app.route('/')
 def home_page():
     stori_list = session.query(Storis).all()
     return render_template('index.html',stori_list=stori_list)
@@ -23,17 +26,21 @@ def home_page():
 
 @app.route('/add')
 def add():
-    stori1 = Storis(author = "Amir", rating = 15 , description = "fake" , pic_url = "url here")
-    session.add(stori1)
-    session.commit()
-    return render_template('add.html')
+    if request.method == 'GET':
+        return render_template('add.html')
+    else:
+        stori_name_instance         = request.form.get('stori_name')
+        author_name_instance        = request.form.get('author_name')
+        tags_instance               = request.form.get('tags')
+        stori_description_instance  = request.form.get('stori_description')
+        text_instance               = request.form.get('stori_here')
+        instance = Storis(name = stori_name_instance, author = author_name_instance,tags = "#thisthis", rating = 4,description = "description fake", text = "enter fake stori", pic_url= "pic here")
+        session.add(instance)
+        session.commit()
+        return redirect(url_for('home_page'))
 
 @app.route('/stori/<int:stori_id>', methods = ['GET','POST'])
 def index_stori():
-    if request.method == 'POST':
-        request.form.get(stori_name)
-        request.form.get(author_name)
-        request.form.get(tags)
     return render_template('index_stori.html', stori_id = stori_id)
 
 @app.route('/search/<int:search_id>')
@@ -46,5 +53,12 @@ def sign_in():
 
 @app.route('/sign_up')
 def sign_up():
-    return render_template('sign_up.html')
-
+    if request.method == 'GET':
+        return render_template('sign_up.html', username = "", email = "")
+    elif request.form.get('password') != request.form.get('confirm_password'):
+        save_username = request.form.get('username')
+        save_email = request.form.get('email')
+        return render_template('sign_up',username = save_username, email = save_email)
+    else:
+        username_istance    = request.form.get('username')
+        pass_instance       = request.form.get('password')

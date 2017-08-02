@@ -35,25 +35,32 @@ body{
 }
 
 #add_pic_url {
+    position: all;
     border-width: 10;
     border-color: black;
     margin-left: 50%;
     width: 50%;
     height:100;
 }
-.custom_form{/*
-    border-style: solid;
-    border-width: 10;
-    border-color: black;*/
+
+.custom_form{
     font-size: 18px;
     margin-bottom: 50px;
-    margin-top: 50px
+    margin-top: 20px;
+    margin-left:50px;
 }
+
 #add_form{
     width: 50%;
     height: 100%;
-    margin-right: 50%;
 }
+
+.subtitle{
+    text-align: left;
+    font-size:36px;
+    margin-left: 50px;
+}
+
 .h1-5{
     margin-left: 50px;
     margin-bottom:30px;
@@ -82,7 +89,7 @@ body{
 legend{
     font-size: 14px;
 }
-input {
+input, textarea {
     font-size: 18px;
     margin-bottom: 20px;
 

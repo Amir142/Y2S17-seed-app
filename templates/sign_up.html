@@ -3,19 +3,20 @@
 
 {% block content %}
 
-<!--   <h1 class = 'h1-5'>Sign up</h1> -->
+  <h1 class = 'h1-5'>Sign up</h1>
+  <!-- {% if {{username}} != "" %} -->
   
    <center>
    <div class="custom_form">
    <form>
     Username:
     <br>
-    <input type="text" name="username" placeholder="Choose your username..."> 
+    <input type="text" name="username" placeholder="Choose your username..." value='{{username}}'> 
     <br>
 
     Email:
     <br>
-    <input type="text" name="email" placeholder="Insert email..."> 
+    <input type="text" name="email" placeholder="Insert email..." value='{{email}}'> 
     <br>
     
     Password: 

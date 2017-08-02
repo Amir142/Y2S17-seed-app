@@ -1,32 +1,38 @@
-  {% extends "layout.html" %}
-  {% block title %}Add Stori{% endblock %}
+{% extends "layout.html" %}
+{% block title %}Add Stori{% endblock %}
 
-  {% block content %}
-    <h2>Write your own Stori!</h2>
-    <div id="add_form">
-    <form style="margin-left: 50px;">
+{% block content %}
+<h1 class="subtitle">Write your own Stori!</h1>
+<div class="custom_form">
+<form>
 
-    Stori Name:
-    <br>
-    <input type="text" name="stori_name" placeholder="Choose a name..."> 
-    <br>
-    Author: 
-    <br>
-    <input type="text" name="author_name" placeholder="Your name...">
-    <br>
-    Tags: 
-    <br>
-    <input type="text" name="tags" placeholder="Don't forget the hashtags!">
-    <br>
-    Stori: 
-    <br>
-    <textarea name="stori_" style="width: 90%; height: 200px;" placeholder="Write here..."></textarea>
-    </div> 
+Stori Name:
+<br>
+<input type="text" name="stori_name" placeholder="Choose a name..."> 
+<br>
+Author: 
+<br>
+<input type="text" name="author_name" placeholder="Your name...">
+<br>
+Tags: 
+<br>
+<input type="text" name="tags" placeholder="Don't forget the hashtags!">
+<br>
+Description:
+<br>
+<textarea name="stori_description" style="width: 90%; height: 30px;" placeholder="Write description..."></textarea>
+<br>
+Stori: 
+<br>
+<textarea name="stori_here" style="width: 90%; height: 200px;" placeholder="Write here..."></textarea>
+</div> 
 
-    <div id="add_pic_url">
-    hello
-    </div>
-    </form>
+<div id="add_pic_url">
+Picture URL:
+<br>
+<input type="text" name="pic_url" placeholder="URL for cover picture">
 
-    {% endblock %}
-	
+</div>
+</form>
+
+{% endblock %}
