@@ -45,3 +45,19 @@ body{
     margin-top: 150;
     font-size: 56px;
 }
+
+.linkbutton1{
+    border:none;
+    display:inline-block;
+    outline:0;
+    padding:14px 133px;
+    vertical-align:middle;
+    overflow:hidden;
+    text-decoration:none;
+    color:white;
+    background-color:#000033!important;
+
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap
+}
