@@ -14,24 +14,31 @@
   <h1>Stori</h1>
     <div class="UpperBar"> <br></div>
 
-    <h1>Write your own Stori!</h1>
-    <div id="add_form">"
-    <form style="margin-left: 50px;">
+    <h1 class = "h1-5">Write your own Stori!</h1>
+    <div id="add_form">
+    <form>
     Stori Name:
     <br>
-    <input type="text" name="Stori_name" placeholder="Choose a name..."> 
+    <input type="text" name="stori_name" placeholder="Choose a name..."> 
     <br>
     Author: 
     <br>
-    <input type="text" name="Author" placeholder="Your name...">
+    <input type="text" name="author_name" placeholder="Your name...">
     <br>
     Tags: 
     <br>
-    <input type="text" name="Tags" placeholder="Don't forget the hashtags!">
+    <legend>
+    
+      to specify a tag add a # in the beginning
+      no spaces inside tags
+      spaces are only to seperate tags
+    </legend>
+    <br>
+    <input type="text" name="tags" placeholder="Don't forget the hashtags!">
     <br>
     Stori: 
     <br>
-    <textarea style="width: 90%; height: 200px;" placeholder="Write here..."></textarea>
+    <textarea name="stori_to_add" style="width: 90%; height: 200px;" placeholder="Write here..."></textarea>
     </div> 
 
     <div id="add_pic_url">
