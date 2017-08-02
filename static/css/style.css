@@ -31,27 +31,22 @@ body{
 }
 
 #add_pic_url {
-    float:left;
-    border-style: solid;
     border-width: 10;
     border-color: black;
-    display: inline-block;
     margin-left: 50%;
     width: 50%;
     height:100;
 }
 #add_form{
-    border-style: solid;
     border-width: 10;
     border-color: black;
-    display: inline-block;
     width: 50%;
     height: 100%;
     margin-right: 50%;
+    font-size: 24px;
 }
 .h1-5{
     margin-left: 50px;
-    margin-bottom:100px;
     margin-right: 150;
     margin-top: 150;
     font-size: 56px;
