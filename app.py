@@ -20,6 +20,7 @@ def home_page():
     stori_list = session.query(Storis).all()
     return render_template('index.html',stori_list=stori_list)
 
+
 @app.route('/add')
 def add():
     stori1 = Storis(author = "Amir", rating = 15 , description = "fake" , pic_url = "url here")
