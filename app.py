@@ -26,12 +26,20 @@ def home_page():
 def add():
     return render_template('add.html')
 
-@app.route('/categories')
-def categories():
-    return render_template('categories.html')
-
 @app.route('/stori/<int:stori_id>')
 def index_stori():
     return render_template('index_stori.html', stori_id = stori_id)
+
+@app.route('/search/<int:search_id>')
+def index_search():
+    return render_template('index_search.html')
+
+@app.route('/sign_in')
+def sign_in():
+    return render_template('sign_in.html')
+
+@app.route('/sign_up')
+def sign_up():
+    return render_template('sign_up.html')
 
 Base.metadata.create_all(engine)
