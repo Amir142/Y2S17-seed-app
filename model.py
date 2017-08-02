@@ -11,3 +11,7 @@ class Storis(Base):
     description    = Column(String)
     pic_url        = Column(String)
 
+class Users(Base):
+    id             = Column(Integer, primary_key=True)
+    username       = Column(String)
+    password       = Column(String)

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <title>STORI</title>
+
+      
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+
+      <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+  </head>
+
+  <body>
+  <center><img src="../static/img/logo" style="width:304px;height:150px;" alt="logo"></center>
+  <style style="margin-right: 75px;"> </style>
+  
+  <div class="UpperBar">
+
+  </div>
+<!--   <h1 class = 'h1-5'>Sign up</h1> -->
+  
+   <center>
+   <div class="custom_form">
+   <form>
+    Username:
+    <br>
+    <input type="text" name="stori_name" placeholder="Choose your username..."> 
+    <br>
+
+    Email:
+    <br>
+    <input type="text" name="email" placeholder="Insert email..."> 
+    <br>
+    
+    Password: 
+    <br>
+    <input type="password" name="password" placeholder="Password">
+    <br>
+    
+    Verify password:
+    <br>
+    <input type="password" name="confirm_password" placeholder="Confirm password">
+    <br>
+    <input type="submit" name="Sign up" placeholder="sign up">
+
+  </form>
+  </div>
+  </center>
+
+<!--    style="margin-left: 50px;" -->
+
+</body>
+</html>
