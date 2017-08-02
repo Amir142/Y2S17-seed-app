@@ -11,6 +11,3 @@ class Storis(Base):
     description    = Column(String)
     pic_url        = Column(String)
 
-
-# IF YOU NEED TO CREATE OTHER TABLE 
-# FOLLOW THE SAME STRUCTURE AS YourModel
