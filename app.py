@@ -17,7 +17,7 @@ session = DBSession()
 
 @app.route('/',methods = ['GET','POST'])
 def home_page():
-    if request.methods == 'POST':
+    if request.method == 'POST':
         request.form.get(stori_name)
         request.form.get(author_name)
         request.form.get(tags)

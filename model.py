@@ -12,6 +12,7 @@ class Storis(Base):
     pic_url        = Column(String)
 
 class Users(Base):
+    __tablename__  = 'users'
     id             = Column(Integer, primary_key=True)
     username       = Column(String)
     password       = Column(String)
