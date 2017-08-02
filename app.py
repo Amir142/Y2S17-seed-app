@@ -13,19 +13,21 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession() 
 
-stori1 = Storis(author = "Amir", rating = 15 , description = "fake" , pic_url = "url here")
-session.add(stori1)
-session.commit()
+
 
 @app.route('/',methods = ['GET','POST'])
 def home_page():
-    if request.methods == 'POST':
+    if request.method == 'POST':
         request.form.get()
-    stori_1ist = session.query(Storis).all()
-    return render_template('index.html',stori_1ist=stori_1ist)
+    stori_list = session.query(Storis).all()
+    print(stori_list)
+    return render_template('index.html',stori_list=stori_list)
 
 @app.route('/add')
 def add():
+    stori1 = Storis(author = "Amir", rating = 15 , description = "fake" , pic_url = "url here")
+    session.add(stori1)
+    session.commit()
     return render_template('add.html')
 
 @app.route('/stori/<int:stori_id>')
@@ -33,11 +35,11 @@ def index_stori():
     return render_template('index_stori.html', stori_id = stori_id)
 
 
-@app.route('/signin')
+@app.route('/sign_in')
 def sign_in():
     return render_template('sign_in.html')
 
 
-@app.route('/signup')
+@app.route('/sign_up')
 def sign_up():
     return render_template('sign_up.html')
