@@ -20,7 +20,9 @@ session.commit()
 @app.route('/',methods = ['GET','POST'])
 def home_page():
     if request.methods == 'POST':
-        request.form.get()
+        request.form.get(stori_name)
+        request.form.get(author_name)
+        request.form.get(tags)
     stori_1ist = session.query(Storis).all()
     return render_template('index.html',stori_1ist=stori_1ist)
 
