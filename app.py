@@ -17,8 +17,10 @@ stori1 = Storis(author = "Amir", rating = 15 , description = "fake" , pic_url = 
 session.add(stori1)
 session.commit()
 
-@app.route('/')
+@app.route('/',methods = ['GET','POST'])
 def home_page():
+    if request.methods == 'POST':
+        request.form.get()
     stori_1ist = session.query(Storis).all()
     return render_template('index.html',stori_1ist=stori_1ist)
 
@@ -42,4 +44,3 @@ def sign_in():
 def sign_up():
     return render_template('sign_up.html')
 
-Base.metadata.create_all(engine)
