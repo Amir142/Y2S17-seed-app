@@ -1,26 +1,8 @@
-<!DOCTYPE html>
-<html>
+{% extends "layout.html" %}
+{% block title %} Sign Up {% endblock %}
 
-  <head>
-  <title>STORI</title>
+{% block content %}
 
-      
-      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
-
-      <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-      <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-      <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-
-  </head>
-
-  <body>
-  <center><img src="../static/img/logo" style="width:304px;height:150px;" alt="logo"></center>
-  <style style="margin-right: 75px;"> </style>
-  
-  <div class="UpperBar">
-
-  </div>
 <!--   <h1 class = 'h1-5'>Sign up</h1> -->
   
    <center>
@@ -51,7 +33,4 @@
   </div>
   </center>
 
-<!--    style="margin-left: 50px;" -->
-
-</body>
-</html>
+{% endblock %}

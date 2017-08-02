@@ -17,12 +17,8 @@ session = DBSession()
 
 @app.route('/',methods = ['GET','POST'])
 def home_page():
-    if request.method == 'POST':
-        request.form.get(stori_name)
-        request.form.get(author_name)
-        request.form.get(tags)
-    stori_1ist = session.query(Storis).all()
-    return render_template('index.html',stori_1ist=stori_1ist)
+    stori_list = session.query(Storis).all()
+    return render_template('index.html',stori_list=stori_list)
 
 @app.route('/add')
 def add():
@@ -31,8 +27,12 @@ def add():
     session.commit()
     return render_template('add.html')
 
-@app.route('/stori/<int:stori_id>')
+@app.route('/stori/<int:stori_id>', methods = ['GET','POST'])
 def index_stori():
+    if request.method == 'POST':
+        request.form.get(stori_name)
+        request.form.get(author_name)
+        request.form.get(tags)
     return render_template('index_stori.html', stori_id = stori_id)
 
 @app.route('/search/<int:search_id>')

@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <title>STORI</title>
-      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+{% extends "layout.html" %}
+{% block title %} Stori {{stori_name}} {% endblock %}
 
-      <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-      <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-      <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% block content %}
 
-  </head>
-  <body>
-  <h1>Stori</h1>
-  <div class="UpperBar">
-
-	</body>
-</html>
+{% endblock %}

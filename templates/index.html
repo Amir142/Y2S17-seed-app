@@ -1,33 +1,7 @@
-<!DOCTYPE html>
-<html>
+{% extends "layout.html" %}
+{% block title %}  Home {% endblock %}
 
-  <head>
-  <title>STORI</title>
-
-      
-      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
-
-      <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-      <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-      <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-
-  </head>
-
-  <body>
-
- 
-
-  <center><img src="../static/img/logo" style="width:304px;height:150px;" alt="logo"></center>
-  <style style="margin-right: 75px;"> </style>
-  
-  <div class="UpperBar">
-  
-  <a href="http://127.0.0.1:5000/" class="linkbutton1">Home</a>
-  <a href="http://127.0.0.1:5000/add" class="linkbutton1">Add Your Story</a> 
-  <a href="http://127.0.0.1:5000/sign_in" class="linkbutton1">Sign In</a>
-  <a href="http://127.0.0.1:5000/sign_up" class="linkbutton1">Sign Up</a>
-  </div>
+{% block content %}
 
   <h2 class= "h1-5"> Top: </h2>
 
@@ -54,3 +28,5 @@
 
   </body>
 </html>
+
+{% endblock %}

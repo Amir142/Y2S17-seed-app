@@ -3,6 +3,10 @@
 	height:70%;
 	background-color: red; 
 }
+
+#logo{
+    text-align: center;
+}
     
 h1 {
     font-size: 100px;
@@ -43,6 +47,7 @@ body{
     border-color: black;*/
     font-size: 18px;
     margin-bottom: 50px;
+    margin-top: 50px
 }
 #add_form{
     width: 50%;
