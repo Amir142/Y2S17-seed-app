@@ -20,7 +20,6 @@ session.commit()
 
 @app.route('/')
 def home_page():
-<<<<<<< Updated upstream
     stori_list = session.query(Storis).all()
     return render_template('index.html',stori_list=stori_list)
 

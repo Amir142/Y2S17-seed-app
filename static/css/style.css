@@ -14,8 +14,8 @@ h1 {
     text-align:center;
     color: black;
 }
-body{
-    background-image: : "/home/student/Desktop/Y2S17-seed-app/templates/book.jpg;"
+html, body{
+   height: 100%;
 }
 
 .UpperBar{
@@ -26,11 +26,10 @@ body{
 }
 
 .box {
+    width: 90%;
     border: 1px #F5F7C1;
     margin-top: 10px;
     margin-bottom: 100px;
-    margin-right: 150px;
-    margin-left: 80px;
     background-color: #F5F7C1; 
 }
 
@@ -98,7 +97,7 @@ input, textarea {
 
     position:relative;
     transition: .5s ease;
-    top: 70px;
+    top: -110px;
     left: 940px;
     right: 100px;
     bottom: -191px;
@@ -115,8 +114,25 @@ input, textarea {
     background-repeat:no-repeat;
 
    background-size:cover;
-    background-image: url('../img/background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    min-height: 100%;
+    height:auto !important; /* cross-browser */
+    height: 100%; /* cross-browser */
+}
+
+#content {
+    background-image: url('../img/background.jpg');
+    background-repeat:no-repeat;
+
+   background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100%;
+    height:auto !important; /* cross-browser */
+    height: 100%; /* cross-browser */
+    position:absolute;
+
 }

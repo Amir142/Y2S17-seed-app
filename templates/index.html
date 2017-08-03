@@ -2,17 +2,18 @@
 {% block title %}  Home {% endblock %}
 
 {% block content %}
+<div id="container">
+  <h2 class= "subtitle"> Top: </h2>
 
-  <h2 class= "h1-5"> Top: </h2>
 {% for box in stori_list %}
 <div class="box">
 
   <p>
-          <div class="tweet-container">
+          
 
             <h2>Button Shapes</h2>
             
-            <button <a href="http://127.0.0.1:5000/index_stori"></a>Read Full Story</button>
+            <button ><a href="http://127.0.0.1:5000/index_stori"></a>Read Full Story</button>
             
 
 
@@ -28,11 +29,11 @@
             </div>
           </div>
   </p>
-</div>
-{% endfor %}
-</div>
 
-  </body>
+{% endfor %}
+
+</div>
+</body>
 </html>
 
 {% endblock %}
