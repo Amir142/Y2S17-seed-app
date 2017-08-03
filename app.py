@@ -47,18 +47,23 @@ def index_stori():
 def index_search():
     return render_template('index_search.html')
 
-@app.route('/sign_in')
+@app.route('/sign_in', methods= ['GET','POST'])
 def sign_in():
-    return render_template('sign_in.html')
+    if request.method == 'GET':
+        return render_template('sign_in.html')
+    else:
+        login_username = request.form.get('username_login')
+        login_pass = request.form.get('password_login')
+        return render_template(url_for('home_page'))
 
-@app.route('/sign_up')
+@app.route('/sign_up', methods=['GET', 'POST'])
 def sign_up():
     if request.method == 'GET':
         return render_template('sign_up.html', username = "", email = "")
-    elif request.form.get('password') != request.form.get('confirm_password'):
-        save_username = request.form.get('username')
-        save_email = request.form.get('email')
-        return render_template('sign_up',username = save_username, email = save_email)
     else:
-        username_istance    = request.form.get('username')
-        pass_instance       = request.form.get('password')
+        username_istance    = request.form.get('username_sign_up')
+        pass_instance       = request.form.get('password_sign_up')
+        user_instance = Users(username = "username_istance",password = "password instance" )
+        return redirect(url_for('home_page'))
+
+Base.metadata.create_all()

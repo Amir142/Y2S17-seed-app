@@ -4,14 +4,12 @@
 {% block content %}
 
   <h1 class = 'h1-5'>Sign up</h1>
-  <!-- {% if {{username}} != "" %} -->
   
-   <center>
-   <div class="custom_form">
+   <div class="custom_form" align="center">
    <form>
     Username:
     <br>
-    <input type="text" name="username" placeholder="Choose your username..." value='{{username}}'> 
+    <input type="text" name="username_sign_up" placeholder="Choose your username..." value='{{username}}'> 
     <br>
 
     Email:
@@ -21,17 +19,16 @@
     
     Password: 
     <br>
-    <input type="password" name="password" placeholder="Password">
+    <input type="password" name="password_sign_up" placeholder="Password">
     <br>
     
     Verify password:
     <br>
     <input type="password" name="confirm_password" placeholder="Confirm password">
     <br>
-    <input type="submit" name="Sign up" placeholder="sign up">
+    <input type="submit" name="sign_up_buttons" placeholder="sign up">
 
   </form>
   </div>
-  </center>
 
 {% endblock %}
