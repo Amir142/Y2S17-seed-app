@@ -40,8 +40,9 @@ def add():
         return redirect(url_for('home_page'))
 
 @app.route('/stori/<int:stori_id>', methods = ['GET','POST'])
-def index_stori():
-    return render_template('index_stori.html', stori_id = stori_id)
+def index_stori(stori_id):
+    stori = session.query(Storis).filter_by(id=stori_id).first()
+    return render_template('index_stori.html', stori=stori)
 
 @app.route('/search/<int:search_id>')
 def index_search():
