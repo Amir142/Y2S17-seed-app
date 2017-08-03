@@ -26,12 +26,12 @@ body{
 }
 
 .box {
-    border: 1px #FFDD99;
+    border: 1px #F5F7C1;
     margin-top: 10px;
     margin-bottom: 100px;
     margin-right: 150px;
     margin-left: 80px;
-    background-color: #FFDD99;
+    background-color: #F5F7C1; 
 }
 
 #add_pic_url {
@@ -93,3 +93,30 @@ input, textarea {
     font-size: 18px;
     margin-bottom: 20px;
 
+}
+.location_read_button{
+
+    position:relative;
+    transition: .5s ease;
+    top: 70px;
+    left: 940px;
+    right: 100px;
+    bottom: -191px;
+    /*bottom:0;
+    right:0;*/
+}
+
+
+
+
+
+#container {
+    background-image: url('../img/background.jpg');
+    background-repeat:no-repeat;
+
+   background-size:cover;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}

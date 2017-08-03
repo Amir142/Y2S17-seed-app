@@ -4,13 +4,19 @@
 {% block content %}
 
   <h2 class= "h1-5"> Top: </h2>
-
 {% for box in stori_list %}
 <div class="box">
 
   <p>
           <div class="tweet-container">
-            <a href="BROKEN-LINK-FIX-ME" class="btn btn-info" role="button">Edit</a>
+
+            <h2>Button Shapes</h2>
+            
+            <button <a href="http://127.0.0.1:5000/index_stori"></a>Read Full Story</button>
+            
+
+
+
             <div class="tweet-body">
               <img class="tweet-img" src="{{box.pic_url}}" alt="picture-{{box.id}}">
               <div class="tweet-text">{{box.description}}</div>
@@ -24,7 +30,7 @@
   </p>
 </div>
 {% endfor %}
-
+</div>
 
   </body>
 </html>
