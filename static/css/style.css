@@ -129,13 +129,13 @@ input, textarea {
     background-image: url('../img/background.jpg');
     background-repeat:no-repeat;
 
-   background-size:cover;
+    background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     min-height: 100%;
     height:auto !important; /* cross-browser */
     height: 100%; /* cross-browser */
-    position:absolute;
+    /*position:absolute;*/
 
 }
