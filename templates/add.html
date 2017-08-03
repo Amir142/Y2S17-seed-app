@@ -4,7 +4,7 @@
 {% block content %}
 <h1 class="subtitle">Write your own Stori!</h1>
 <div class="custom_form" id="add_form">
-<form>
+<form action="/add" method="post">
 
 Stori Name:
 <br>
@@ -32,7 +32,7 @@ Picture URL:
 <br>
 <input type="text" name="pic_url" placeholder="URL for cover picture">
 <br>
-<a href="{{url_for('home_page')}}" name="add_button"><button>Add</button></a>
+<a href="{{url_for('add')}}" name="add_button"><button>Add</button></a>
 
 </div>
 </form>

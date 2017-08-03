@@ -34,10 +34,11 @@ def add():
         tags_instance               = request.form.get('tags')
         stori_description_instance  = request.form.get('stori_description')
         text_instance               = request.form.get('stori_here')
-        instance = Storis(name = stori_name_instance, author = author_name_instance,tags = "#thisthis", rating = 4,description = "description fake", text = "enter fake stori", pic_url= "pic here")
+        pic_url_instance            = request.form.get('pic_url')
+        instance = Storis(name = stori_name_instance, author = author_name_instance,tags = tags_instance, rating = 0,description = "description fake", text = text_instance, pic_url= pic_url_instance)
         session.add(instance)
         session.commit()
-        return redirect(url_for('home_page'))
+        return redirect(url_for('index_stori',stori_id = instance.id))
 
 @app.route('/stori/<int:stori_id>', methods = ['GET','POST'])
 def index_stori(stori_id):
