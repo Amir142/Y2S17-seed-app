@@ -2,5 +2,10 @@
 {% block title %} Stori {{stori_name}} {% endblock %}
 
 {% block content %}
+<center>
+<h1>{{stori.name}}</h1>
+<h4>by {{stori.author}}</h4>
+</center>
+<div style="margin-left:40px;margin-right:100px;"><p>{{stori.text}}</p></div>
 
 {% endblock %}
