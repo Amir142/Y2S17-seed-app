@@ -2,10 +2,12 @@
 {% block title %} Stori {{stori_name}} {% endblock %}
 
 {% block content %}
+{% for i in stori%}
 <center>
-<h1>{{stori.name}}</h1>
-<h4>by {{stori.author}}</h4>
+<h1>{{i.name}}</h1>
+<h4>by {{i.author}}</h4>
 </center>
-<div style="margin-left:40px;margin-right:100px;"><p>{{stori.text}}</p></div>
+<div style="margin-left:40px;margin-right:100px;"><p>{{i.text}}</p></div>
+{% endfor %}
 
 {% endblock %}

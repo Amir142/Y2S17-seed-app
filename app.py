@@ -18,13 +18,13 @@ session.add(example)
 session.commit()
 
 
-@app.route('/')
+@app.route('/', methods = ['GET','POST'])
 def home_page():
     stori_list = session.query(Storis).all()
     return render_template('index.html',stori_list=stori_list)
 
 
-@app.route('/add')
+@app.route('/add',methods = ['GET','POST'])
 def add():
     if request.method == 'GET':
         return render_template('add.html')
@@ -41,7 +41,7 @@ def add():
 
 @app.route('/stori/<int:stori_id>', methods = ['GET','POST'])
 def index_stori(stori_id):
-    stori = session.query(Storis).filter_by(id=stori_id).first()
+    stori = session.query(Storis).filter_by(id=stori_id).all()
     return render_template('index_stori.html', stori=stori)
 
 @app.route('/search/<int:search_id>')

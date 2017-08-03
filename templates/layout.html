@@ -15,17 +15,17 @@
   <div class = "header" align="center">
     <img src="../static/img/logo" style="width:304px;height:150px;" id="logo">
 
-
     <div class="UpperBar">
       <a href="{{url_for('home_page')}}" class="linkbutton1">Home</a>
       <a href="{{url_for('add')}}" class="linkbutton1">Add Your Story</a> 
       <a href="{{url_for('sign_in')}}" class="linkbutton1">Sign In</a>
       <a href="{{url_for('sign_up')}}" class="linkbutton1">Sign Up</a>
-
-     </div>
     </div>
 
-    <div id="content">{% block content %}{% endblock %}</div>
+  </div>
 
-    </body>
+  <div id="content">{% block content %}{% endblock %}</div>
+
+  </body>
+  
 </html>
