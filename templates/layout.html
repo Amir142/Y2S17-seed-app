@@ -11,8 +11,8 @@
 
   </head>
   <body>
-  <div class = "header">
-    <center><img src="../static/img/logo" style="width:304px;height:150px;" alt="logo"></center>
+  <div class = "header" align = "center">
+    <img src="../static/img/logo" style="width:304px;height:150px;" id="logo">
 
 
     <div class="UpperBar">
@@ -24,9 +24,7 @@
      </div>
     </div>
 
-    <!--<div id="content"> </div>-->
-
-    {% block content %}{% endblock %}
+    <div id="content">{% block content %}{% endblock %}</div>
 
     </body>
 </html>
