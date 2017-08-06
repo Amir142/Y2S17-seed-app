@@ -17,7 +17,12 @@ session = DBSession()
 #     session.delete(deleting)
 #     session.commit()
 
-k# example = Storis(name = "stori1", author = "Amir", tags = "#this #that", rating = 23, description = "fake",text = "stori here", pic_url = "insert fake url")
+for deleting in session.query(Storis):
+    if 'name' in deleting.name or '' in deleting.name or 'stori' in deleting.name:
+        session.delete(deleting)
+        session.commit()
+
+# example = Storis(name = "stori1", author = "Amir", tags = "#this #that", rating = 23, description = "fake",text = "stori here", pic_url = "insert fake url")
 # session.add(example)
 # session.commit()
 
@@ -33,7 +38,6 @@ def home_page():
     #     for char in tags:
     #         if char == '':
     #             tags = tags[:char]+tags[char+1:]
-
 
 
 @app.route('/add',methods = ['GET','POST'])
@@ -72,7 +76,12 @@ def sign_in():
     else:
         login_username = request.form.get('username_login')
         login_pass = request.form.get('password_login')
-        return render_template(url_for('home_page'))
+        user = session.query(Users).filter_by(username=login_username).first()
+        if user.password == login_pass:
+
+            return render_template(url_for('home_page'))
+        else:
+            return render_template('sign_in.html')
 
 @app.route('/sign_up', methods=['GET', 'POST'])
 def sign_up():
