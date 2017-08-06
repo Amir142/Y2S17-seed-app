@@ -13,9 +13,6 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession() 
 
-for deletethis in session.query(Storis):
-    
-
 # for deleting in session.query(Storis):
 #     session.delete(deleting)
 #     session.commit()

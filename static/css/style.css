@@ -23,7 +23,7 @@
     /*margin-top: -20px;*/   /*FIXED*/
 }
 .UpperBar{
-    width: 100%;
+    width: 110%;
     height: 50px;
     /*background-color: #0081AF;*/
     background-color: #000033;
@@ -63,9 +63,9 @@
 
 .box_rating{
     margin-top: 10px;
-    margin-bottom: 15px;
-    font-size: 40px;
-    margin-left: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    margin-left: 17px;
     /*margin-left: 20px;*/
     vertical-align: bottom;
     height: 50px;
@@ -100,7 +100,7 @@
 
 .read_stori_button{
     display: inline-block;
-    margin-left: 55%;
+    margin-left: 80%;
     margin-bottom: 20px;
     margin-top: 10px;
 }
