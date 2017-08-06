@@ -30,14 +30,15 @@
 
       <br>
 
-      
       <a class="read_stori_button" href="{{url_for('index_stori',stori_id=box.id)}}">
       <button>Read Full Stori</button>
       </a> 
 
       <div class="box_rating">
-        {{box.rating}}
-        <a onclick="AddUpvote()"><img id="upvote" src="static/img/upvote-grey.gif" ></a>
+        <div class="rating_num" id="rating_num_{{box.id|string}}">
+          {{box.rating}}
+        </div>
+        <a onclick="AddUpvote({{box.id|string}});"><img class="upvote" id="upvote_{{box.id|string}}" src="/static/img/upvote-grey.png" ></a>
       </div>
 
 <!--       <div class="box_tags">

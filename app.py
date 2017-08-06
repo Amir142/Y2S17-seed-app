@@ -17,7 +17,7 @@ session = DBSession()
 #     session.delete(deleting)
 #     session.commit()
 
-# example = Storis(name = "stori1", author = "Amir", tags = "#this #that", rating = 23, description = "fake",text = "stori here", pic_url = "insert fake url")
+k# example = Storis(name = "stori1", author = "Amir", tags = "#this #that", rating = 23, description = "fake",text = "stori here", pic_url = "insert fake url")
 # session.add(example)
 # session.commit()
 
