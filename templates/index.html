@@ -2,36 +2,51 @@
 {% block title %}  Home {% endblock %}
 
 {% block content %}
-<div id="container">
-  <h2 class= "subtitle"> Top: </h2>
+<h1 class= "subtitle"> Top: </h1>
 
 {% for box in stori_list %}
+
 <div class="box">
 
-  <p>
-          
+  <div class="box_content">
+    
 
-            <h2>My Story is....</h2>
-            
-            <a href="{{url_for('index_stori',stori_id=box.id)}}"><button>Read Full Story</button></a>
-            
+      <h1 class="stori_title">{{box.name}}</h1>
+  
+      {% if box.pic_url == '' %}
+      <img class="box_img" src="../static/img/missing-book-black.jpg" alt="picture_{{box.id}}">
+      {% else %}
+      <img class="box_img" src="{{box.pic_url}}" alt="picture_{{box.id}}">
+      {% endif %}
+    
+      <div class="box_info">
+        <div class="box_description">
+          {{ box.description }}
+        </div>
+        <div class="box_author">
+        By: {{ box.author }}
+        </div>
+      </div>
 
-            <div class="tweet-body">
-              <img class="tweet-img" src="{{box.pic_url}}" alt="picture-{{box.id}}">
-              <div class="tweet-text">{{box.description}}</div>
-            </div>
-            <div class="tweet-footer">
-              <div class="tweet-user">{{box.author}}</div>
-              <div class="tweet-user">{{box.location}}</div>
-              <div class="tweet-user">{{box.favorite_count}}</div>
-            </div>
-          </div>
-  </p>
+      <br>
 
-{% endfor %}
+      
+      <a class="read_stori_button" href="{{url_for('index_stori',stori_id=box.id)}}">
+      <button>Read Full Stori</button>
+      </a> 
+
+      <div class="box_rating">
+        {{box.rating}}
+        <a onclick="AddUpvote()"><img id="upvote" src="static/img/upvote-grey.gif" ></a>
+      </div>
+
+<!--       <div class="box_tags">
+        {# fixtags(box.tags) #}
+      </div> -->
+
+  </div>
 
 </div>
-</body>
-</html>
 
+{% endfor %}
 {% endblock %}

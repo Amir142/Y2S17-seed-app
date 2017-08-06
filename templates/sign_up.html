@@ -1,3 +1,5 @@
+
+
 {% extends "layout.html" %}
 {% block title %} Sign Up {% endblock %}
 
@@ -6,29 +8,29 @@
   <h1 class = 'h1-5'>Sign up</h1>
   
    <div class="custom_form" align="center">
-   <form>
-    Username:
-    <br>
-    <input type="text" name="username_sign_up" placeholder="Choose your username..." value='{{username}}'> 
-    <br>
+      <form action="/sign_up" method="post">
+        Username:
+        <br>
+        <input type="text" name="username_sign_up" placeholder="Choose your username..."> 
+        <br>
 
-    Email:
-    <br>
-    <input type="text" name="email" placeholder="Insert email..." value='{{email}}'> 
-    <br>
-    
-    Password: 
-    <br>
-    <input type="password" name="password_sign_up" placeholder="Password">
-    <br>
-    
-    Verify password:
-    <br>
-    <input type="password" name="confirm_password" placeholder="Confirm password">
-    <br>
-    <input type="submit" name="sign_up_buttons" placeholder="sign up">
+        Email:
+        <br>
+        <input type="text" name="email" placeholder="Insert email..."> 
+        <br>
+        
+        Password: 
+        <br>
+        <input type="password" name="password_sign_up" placeholder="Password">
+        <br>
+        
+        Verify password:
+        <br>
+        <input type="password" name="confirm_password" placeholder="Confirm password">
+        <br>
+        <input type="submit" name="sign_up_buttons" placeholder="sign up">
 
-  </form>
+      </form>
   </div>
 
 {% endblock %}

@@ -13,7 +13,7 @@
   <body>
 
   <div class = "header" align="center">
-    <img src="../static/img/logo" style="width:304px;height:150px;" id="logo">
+    <img src="../static/img/logo" style="width:304px;height:100%;" id="logo">
 
     <div class="UpperBar">
       <a href="{{url_for('home_page')}}" class="linkbutton1">Home</a>
@@ -24,8 +24,20 @@
 
   </div>
 
-  <div id="content">{% block content %}{% endblock %}</div>
+  <div class="user_info">
+    
+  </div>
+
+  <div id="search_bar">
+    <input type="text" name="search_bar">
+  </div>
+
+  <img id="background_image" src="../static/img/background.jpg">
+
+  <div class="content">
+  {% block content %}{% endblock %}
+  </div>
 
   </body>
-  
+
 </html>

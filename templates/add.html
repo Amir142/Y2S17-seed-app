@@ -4,37 +4,37 @@
 {% block content %}
 <h1 class="subtitle">Write your own Stori!</h1>
 <div class="custom_form" id="add_form">
-<form action="/add" method="post">
+    <form action="/add" method="post">
 
-Stori Name:
-<br>
-<input type="text" name="stori_name" placeholder="Choose a name..."> 
-<br>
-Author: 
-<br>
-<input type="text" name="author_name" placeholder="Your name...">
-<br>
-Tags: 
-<br>
-<input type="text" name="tags" placeholder="Don't forget the hashtags!">
-<br>
-Description:
-<br>
-<textarea name="stori_description" style="width: 90%; height: 30px;" placeholder="Write description..."></textarea>
-<br>
-Stori: 
-<br>
-<textarea name="stori_here" style="width: 90%; height: 200px;" placeholder="Write here..."></textarea>
-</div> 
+        Stori Name:
+        <br>
+        <input type="text" name="stori_name" placeholder="Choose a name..."> 
+        <br>
+        Author: 
+        <br>
+        <input type="text" name="author_name" placeholder="Your name...">
+        <br>
+        Tags: 
+        <br>
+        <input type="text" name="tags" placeholder="Don't forget the hashtags!">
+        <br>
+        Description:
+        <br>
+        <textarea name="stori_description" style="width: 90%; height: 30px;" placeholder="Write description..."></textarea>
+        <br>
+        Stori: 
+        <br>
+        <textarea name="stori_here" style="width: 90%; height: 200px;" placeholder="Write here..."></textarea>
+        </div> 
 
-<div id="add_pic_url">
-Picture URL:
-<br>
-<input type="text" name="pic_url" placeholder="URL for cover picture">
-<br>
-<a href="{{url_for('add')}}" name="add_button"><button>Add</button></a>
-
+        <div id="add_pic_url">
+        Picture URL:
+        <br>
+        <input type="text" name="pic_url" placeholder="URL for cover picture">
+        <br>
+        <a href="{{url_for('add')}}" name="add_button"><button>Add</button></a>
+        
+    </form>
 </div>
-</form>
 
 {% endblock %}

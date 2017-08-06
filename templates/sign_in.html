@@ -6,21 +6,21 @@
 <h1 class = 'h1-5'>Sign in</h1>
 
    <div class="custom_form" align="center">
-       <form>
-        Username:
-        <br>
-        <input type="text" name="username_log_in" placeholder="Choose your username..." value='{{username}}'> 
-        <br>
-        
-        Password: 
-        <br>
-        <input type="password" name="password_log_in" placeholder="Password">
-        <br>
+        <form action="/sign_in" method="post">
+            Username:
+            <br>
+            <input type="text" name="username_log_in" placeholder="Choose your username..." value='{{username}}'> 
+            <br>
+            
+            Password: 
+            <br>
+            <input type="password" name="password_log_in" placeholder="Password">
+            <br>
 
-        <input type="submit" name="sign_in_button" placeholder="sign up">
+            <input type="submit" name="sign_in_button" placeholder="sign up">
 
-      </form>
-  </div>
+        </form>
+    </div>
 
 
 {% endblock %}

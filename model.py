@@ -13,9 +13,12 @@ class Storis(Base):
     description    = Column(String)
     text           = Column(String)
     pic_url        = Column(String)
+    #added_by       = Column(String)        #ADD LATER
 
 class Users(Base):
     __tablename__  = 'users'
     id             = Column(Integer, primary_key=True)
     username       = Column(String)
     password       = Column(String)
+    profile_pic    = Column(String)
+    online         = Column(Boolean)
